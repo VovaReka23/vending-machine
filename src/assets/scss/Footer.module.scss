@@ -1,0 +1,14 @@
+.footer {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  .span {
+    color: #fff;
+    font-weight: bold;
+  }
+}

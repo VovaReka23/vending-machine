@@ -1,0 +1,38 @@
+.card {
+  width: 22%;
+  margin: 0 0 35px;
+  box-shadow:2px 3px 5px #999;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 1s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &.dibable{
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .price, .name, .outOfStock, .count {
+    padding: 10px 0px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+  .count {
+    background: #0080002e;
+  }
+  .outOfStock {
+    background: #ff000030;
+  }
+  .name {
+    background: #ffba3640;
+  }
+  .price {
+    background: #8080803d;
+  }
+}

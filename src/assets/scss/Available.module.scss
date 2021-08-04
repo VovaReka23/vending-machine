@@ -1,0 +1,24 @@
+.available {
+ display: flex;
+ align-items: center;
+ position: relative;
+ img {
+   width: 75px;
+ }
+ span {
+   font-size: 15px;
+   font-weight: bold;
+   width: 28px;
+   height: 28px;
+   background: #fff;
+   position: absolute;
+   left: 48%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   border: 1px solid #000;
+ }
+}

@@ -1,0 +1,12 @@
+.basketCard {
+ border: 1px solid #000;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-right: 25px;
+ background: #fff;
+ img {
+   max-width: 70px;
+   margin: 20px;
+ }
+}

@@ -1,0 +1,23 @@
+body {
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0 0 70px;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1070px;
+    width: 100%;
+    margin: 0 auto;
+}
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.basket__container {
+    border: 1px solid #000;
+    margin-top: 30px;
+}
