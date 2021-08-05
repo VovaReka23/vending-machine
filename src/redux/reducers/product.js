@@ -19,12 +19,35 @@ const initialState = {
     { id: "b03", name: "Chips", price: 1.30, count: 4, img: chips }
   ],
   coins: [0.01, 0.02, 0.05, 0.10, 0.20, 0.50, 1, 2],
-  money: 102,
-  basket: [{ id: "a01", name: "Twix", price: 1, count: 2, img: twix }, { id: "b03", name: "Chips", price: 1.30, count: 4, img: chips }],
+  money: 10.2,
+  basket: [{ id: "a01", name: "Twix", price: 1, count: 2, img: twix }],
 };
 
 const product = (state = initialState, action) => {
   switch (action.type) {
+    case 'ADD_PRODUCTS_TO_CART':
+      let newProduct = {
+        id: action.payload.id,
+        name: action.payload.name,
+        price: action.payload.price,
+        count: 1,
+        price: action.payload.price
+      };
+      const items = [...state.items, newProduct];
+      return {
+        ...state,
+        basket: items,
+      };
+
+    case 'EDIT_PRODUCTS_COUNT':
+      state.products.forEach((product) => {
+        if (product.id === action.payload.id) {
+          product.count = action.payload.count;
+        }
+      })
+      return {
+        ...state,
+      };
 
     default:
       return state;

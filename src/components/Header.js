@@ -5,6 +5,7 @@ import logo from '../assets/img/logo.png';
 import basket from '../assets/img/basket.png';
 import styles from '../assets/scss/Header.module.scss';
 import Input from './Input'
+import Button from './Button'
 import Available from './Available'
 
 const Header = (props) => {
@@ -13,9 +14,10 @@ const Header = (props) => {
             <Link to={`/`}>
                 <img className={styles.logo} src={logo} alt="logo" />
             </Link>
-            <div>
+            <div className="money__container">
                 <Input lable="Pounds:" />
                 <Input lable="Penny:" />
+                <Button className="small">send</Button>
             </div>
             <Available money={props.money} />
             <Link to={`/basket`}>

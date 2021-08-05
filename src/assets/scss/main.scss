@@ -11,13 +11,42 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+.m-30t {
+    margin-top: 30px; 
+}
 .card__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: space-between;  
 }
 .basket__container {
     border: 1px solid #000;
-    margin-top: 30px;
+}
+.back-home {
+    padding: 20px 50px;
+    background: #45ea4587;
+    display: inline-block;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    color: #000;
+    text-decoration: none;
+    &:hover {
+        background-color: #4acb4a91;
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.small {
+    font-size: 12px;
+    padding: 10px 20px;
+}
+.money__container {
+    display: flex;
+    align-items: center;
 }

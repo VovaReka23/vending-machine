@@ -1,0 +1,14 @@
+.button {
+    padding: 20px 50px;
+    background: #45ea4587;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #4acb4a91;
+    }
+}
