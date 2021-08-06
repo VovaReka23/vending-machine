@@ -1,24 +1,32 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as ProductActions from '../redux/actions/product';
+import * as CoinsActions from '../redux/actions/coins';
 import { Card, Button, Popup, Checkout } from '../components'
 
 const Home = (props) => {
-    const [visible, setVisible] = React.useState(false);
-    const closePopup = () => {
-        setVisible(false);
-    };
-    const openPopup = () => {
-        setVisible(true);
-    };
+    const [, updateState] = React.useState();
+    const forceUpdate = React.useCallback(() => updateState({}), []);
+
+    const addToCard = (event, product) => {
+        if (props.money < product.price) {
+            props.sendMessage("You haven't enought money")
+
+        } else {
+            props.decrementCountProduct(product.id);
+            props.sendMoney(props.money - product.price);
+            props.addToCart(product, forceUpdate);
+            props.sendMessage('Thank you for your order!')
+        }
+
+    }
+
     return (
-        <div className={'container m-30t'}>
-            <Button onClick={openPopup}>Get products</Button>
-            {visible &&
-                <Popup onClick={closePopup}><Checkout coins={props.coins} basket={props.basket} money={props.money} /></Popup>
-            }
-            <div className={'card__container m-30t'}>
+        <div className={'main-content'}>
+            <div className={'card__container'}>
                 {props.products.map((product) => (
-                    <Card key={product.id} product={product} />
+                    <Card onClick={addToCard} key={product.id} product={product} />
                 ))}
             </div>
         </div>
@@ -27,7 +35,11 @@ const Home = (props) => {
 const mapStateToProps = state => ({
     products: state.product.products,
     basket: state.product.basket,
-    money: state.product.money,
-    coins: state.product.coins,
+    money: state.coins.money,
+    coins: state.coins.coins
 })
-export default connect(mapStateToProps)(React.memo(Home))
+const mapDispatchToProps = dispatch => bindActionCreators({
+    ...ProductActions,
+    ...CoinsActions
+}, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Home))

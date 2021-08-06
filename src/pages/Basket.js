@@ -1,21 +1,31 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as ProductActions from '../redux/actions/product';
+import * as CoinsActions from '../redux/actions/coins';
 import { Link } from "react-router-dom";
-import { BasketCard } from '../components'
+import { Checkout } from '../components'
 const Basket = (props) => {
     return (
-        <div className={'container m-30t'}>
+        <div className={'main-content'}>
             <Link className="back-home" to={`/`}>
                 Back to home
             </Link>
             <div className={'basket__container m-30t'}>
-                {props.basket.map((product) => (<BasketCard key={product.id} product={product} />))}
+                {props.basket.length !== 0 ? <Checkout money={props.money} sendMoney={props.sendMoney} increment={props.incrementCountProduct} message={props.sendMessage} remove={props.removeProduct} basket={props.basket} /> :
+                    <p className="back-empty">Basket is empty</p>
+                }
             </div>
         </div>
     )
 }
 
 const mapStateToProps = state => ({
-    basket: state.product.basket
+    basket: state.product.basket,
+    money: state.coins.money,
 })
-export default connect(mapStateToProps)(React.memo(Basket))
+const mapDispatchToProps = dispatch => bindActionCreators({
+    ...ProductActions,
+    ...CoinsActions
+}, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Basket))

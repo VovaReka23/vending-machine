@@ -17,6 +17,9 @@
     opacity: 0.3;
     pointer-events: none;
   }
+  img {
+    max-width: 100%;
+  }
   .price, .name, .outOfStock, .count {
     padding: 10px 0px;
     text-align: center;

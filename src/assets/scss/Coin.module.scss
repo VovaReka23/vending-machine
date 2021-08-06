@@ -1,0 +1,13 @@
+.coin {
+    background: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    margin: 5px;
+}

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../assets/scss/Card.module.scss';
 import cn from 'classnames';
-const Card = ({ product }) => {
+const Card = ({ product, onClick }) => {
     return (
-        <div className={cn(styles.card, {
+        <div onClick={(event) => onClick(event, product)} className={cn(styles.card, {
             [styles.dibable]: !product.count,
         })}>
             {product.count ?

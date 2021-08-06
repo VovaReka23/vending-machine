@@ -1,8 +1,12 @@
 import React from 'react'
 import styles from '../assets/scss/Checkout.module.scss';
-const Checkout = ({ basket, money, coins }) => {
-
-    console.log(money, coins);
+const Checkout = ({ basket, remove, increment, money, sendMoney, message }) => {
+    const handlerRemove = (event, id, count = 1, price) => {
+        remove(id)
+        message('You remove product!')
+        increment(id, count)
+        sendMoney(money + count * price)
+    }
     return (
         <div className={styles.checkout}>
             <h3>Checkout: </h3>
@@ -10,7 +14,7 @@ const Checkout = ({ basket, money, coins }) => {
                 <ul>
                     {basket.map((product) => (
                         <li key={product.id} className={styles.product}>
-                            <button className={styles.close}>X</button>
+                            <button onClick={(event) => handlerRemove(event, product.id, product.count, product.price)} className={styles.close}>X</button>
                             <img src={product.img} alt="product" />
                             <span className={styles.count}>{product.count}</span>
                             <div className={styles.name}>{product.name}</div>
@@ -20,11 +24,7 @@ const Checkout = ({ basket, money, coins }) => {
 
                 </ul>
             </div>
-            <div className={styles.info}>
-                <h4>Your rest of the money:</h4>
-                <span><b>Money: </b>{money}</span>
-            </div>
-        </div>
+        </div >
     )
 }
 
