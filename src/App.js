@@ -9,10 +9,10 @@ function App() {
 
       <div className="container m-30t">
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/vending-machine">
             <Home />
           </Route>
-          <Route exact path="/basket">
+          <Route exact path="/vending-machine/basket">
             <Basket />
           </Route>
         </Switch>
