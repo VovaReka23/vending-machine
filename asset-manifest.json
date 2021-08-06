@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/vending-machine/static/css/main.10aa4ae1.chunk.css",
+    "main.js": "/vending-machine/static/js/main.9ef717de.chunk.js",
+    "main.js.map": "/vending-machine/static/js/main.9ef717de.chunk.js.map",
+    "runtime-main.js": "/vending-machine/static/js/runtime-main.5fbdfdd1.js",
+    "runtime-main.js.map": "/vending-machine/static/js/runtime-main.5fbdfdd1.js.map",
+    "static/js/2.2ee1f96e.chunk.js": "/vending-machine/static/js/2.2ee1f96e.chunk.js",
+    "static/js/2.2ee1f96e.chunk.js.map": "/vending-machine/static/js/2.2ee1f96e.chunk.js.map",
+    "index.html": "/vending-machine/index.html",
+    "static/css/main.10aa4ae1.chunk.css.map": "/vending-machine/static/css/main.10aa4ae1.chunk.css.map",
+    "static/js/2.2ee1f96e.chunk.js.LICENSE.txt": "/vending-machine/static/js/2.2ee1f96e.chunk.js.LICENSE.txt",
+    "static/media/chewing.9d5df264.jpg": "/vending-machine/static/media/chewing.9d5df264.jpg",
+    "static/media/chips.e902b97d.jpg": "/vending-machine/static/media/chips.e902b97d.jpg",
+    "static/media/chocolate.c1ffcf7b.jpg": "/vending-machine/static/media/chocolate.c1ffcf7b.jpg",
+    "static/media/coca-cola.053dca21.jpg": "/vending-machine/static/media/coca-cola.053dca21.jpg",
+    "static/media/doritos.81534347.jpg": "/vending-machine/static/media/doritos.81534347.jpg",
+    "static/media/logo.062b37cc.png": "/vending-machine/static/media/logo.062b37cc.png",
+    "static/media/peanuts.7fc22c63.jpg": "/vending-machine/static/media/peanuts.7fc22c63.jpg",
+    "static/media/twix.a96e183f.jpg": "/vending-machine/static/media/twix.a96e183f.jpg",
+    "static/media/water.78b8e2ab.gif": "/vending-machine/static/media/water.78b8e2ab.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5fbdfdd1.js",
+    "static/js/2.2ee1f96e.chunk.js",
+    "static/css/main.10aa4ae1.chunk.css",
+    "static/js/main.9ef717de.chunk.js"
+  ]
+}
