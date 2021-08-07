@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as ProductActions from '../redux/actions/product';
 import * as CoinsActions from '../redux/actions/coins';
-import { Card, Button, Popup, Checkout } from '../components'
+import { Card } from '../components'
 
 const Home = (props) => {
     const [, updateState] = React.useState();

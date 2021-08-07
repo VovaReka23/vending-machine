@@ -5,3 +5,5 @@ export { default as Button } from './Button';
 export { default as Popup } from './Popup';
 export { default as Checkout } from './Checkout';
 export { default as Sidebar } from './Sidebar';
+export { default as AdminCard } from './AdminCard';
+export { default as AdminCoin } from './AdminCoin';

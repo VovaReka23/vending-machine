@@ -13,8 +13,13 @@
       display: block;
       max-width: 100px;
   }
-  .basket {
+  .basket, .admin {
       display: block;
       max-width: 40px;
+  }
+  .rightBlock {
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
   }
 }

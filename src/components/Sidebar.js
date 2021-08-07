@@ -13,7 +13,7 @@ const Sidebar = (props) => {
         props.sendBalance(props.coins, props.money)
     }, [props.money])
     const getProductAndRest = () => {
-        if (!props.money || props.balance.length === 0) {
+        if (!props.money && props.balance.length === 0) {
             props.sendMessage('Please top up your balance')
         } else {
             props.getRest();

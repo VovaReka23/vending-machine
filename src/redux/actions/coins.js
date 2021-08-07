@@ -22,5 +22,10 @@ const changeCountCoin = (id) => dispatch => {
 const sendMessage = (message) => async dispatch => {
     dispatch({ type: 'SEND_MESSAGE', payload: message })
 }
+const addCoins = (coins, forceUpdate) => ({
+    type: 'ADD_COIN',
+    payload: coins,
+    forceUpdate: forceUpdate
+});
 
-export { sendMoney, changeCountCoin, sendMessage, sendBalance, getRest }
+export { sendMoney, changeCountCoin, sendMessage, sendBalance, getRest, addCoins }

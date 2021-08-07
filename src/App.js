@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import { Home, Basket } from './pages'
+import { Home, Basket, Admin } from './pages'
 import { Header, Footer, Sidebar } from './components'
 function App() {
   return (
@@ -14,6 +14,9 @@ function App() {
           </Route>
           <Route exact path="/vending-machine/basket">
             <Basket />
+          </Route>
+          <Route exact path="/vending-machine/admin">
+            <Admin />
           </Route>
         </Switch>
         <Sidebar />

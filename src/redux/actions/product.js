@@ -3,6 +3,11 @@ const addToCart = (product, forceUpdate) => ({
     payload: product,
     forceUpdate: forceUpdate
 });
+const addProducts = (product, forceUpdate) => ({
+    type: 'ADD_PRODUCTS',
+    payload: product,
+    forceUpdate: forceUpdate
+});
 const getProduct = () => dispatch => {
     dispatch({ type: 'GET_PRODUCT' })
 }
@@ -19,4 +24,4 @@ const removeProduct = (id) => ({
     type: 'REMOVE_PRODUCT',
     payload: id,
 });
-export { addToCart, decrementCountProduct, removeProduct, incrementCountProduct, getProduct }
+export { addToCart, decrementCountProduct, removeProduct, incrementCountProduct, getProduct, addProducts }

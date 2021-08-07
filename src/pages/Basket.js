@@ -8,7 +8,7 @@ import { Checkout } from '../components'
 const Basket = (props) => {
     return (
         <div className={'main-content'}>
-            <Link className="back-home" to={`/`}>
+            <Link className="back-home" to={`/vending-machine`}>
                 Back to home
             </Link>
             <div className={'basket__container m-30t'}>

@@ -1,0 +1,22 @@
+.adminCoins {
+ border: 1px solid #000;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-right: 25px;
+ background: #fff;
+ .coin {
+    background: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    margin: 5px;
+ }
+}

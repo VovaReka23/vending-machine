@@ -19,6 +19,7 @@ const initialState = {
     { id: "b03", name: "Chips", price: 1.30, count: 4, img: chips }
   ],
   basket: [],
+  reset: ''
 };
 
 const product = (state = initialState, action) => {
@@ -44,6 +45,19 @@ const product = (state = initialState, action) => {
       return {
         ...state,
         basket: basket,
+      };
+    }
+    case 'ADD_PRODUCTS': {
+      for (const [key, value] of Object.entries(action.payload)) {
+        state.products.forEach((item) => {
+          if (item.id === key) {
+            item.count += +value;
+          }
+        })
+      }
+      action.forceUpdate();
+      return {
+        ...state, reset: Math.random()
       };
     }
     case 'GET_PRODUCT': {
