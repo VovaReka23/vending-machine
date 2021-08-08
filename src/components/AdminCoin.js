@@ -18,5 +18,7 @@ const AdminCoin = ({ coin, changeCountMoney, reset }) => {
 }
 AdminCoin.propTypes = {
     product: PropTypes.object,
+    changeCountMoney: PropTypes.func,
+    reset: PropTypes.number,
 };
 export default AdminCoin;

@@ -20,5 +20,7 @@ const AdminCard = ({ product, changeCountProducts, reset }) => {
 }
 AdminCard.propTypes = {
     product: PropTypes.object,
+    changeCountProducts: PropTypes.func,
+    reset: PropTypes.number,
 };
 export default AdminCard;

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import styles from '../assets/scss/Checkout.module.scss';
 const Checkout = ({ basket, remove, increment, money, sendMoney, message }) => {
     const handlerRemove = (event, id, count = 1, price) => {
@@ -27,5 +28,12 @@ const Checkout = ({ basket, remove, increment, money, sendMoney, message }) => {
         </div >
     )
 }
-
+Checkout.propTypes = {
+    basket: PropTypes.array,
+    remove: PropTypes.func,
+    increment: PropTypes.func,
+    sendMoney: PropTypes.func,
+    message: PropTypes.func,
+    money: PropTypes.number,
+};
 export default Checkout

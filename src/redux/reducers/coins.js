@@ -52,7 +52,7 @@ const initialState = {
   ],
   money: 0,
   balance: [],
-  reset: '',
+  reset: 0,
   message: 'Please send money and make an order'
 };
 

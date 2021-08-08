@@ -20,5 +20,6 @@ const Card = ({ product, onClick }) => {
 }
 Card.propTypes = {
     product: PropTypes.object,
+    onClick: PropTypes.func,
 };
 export default Card

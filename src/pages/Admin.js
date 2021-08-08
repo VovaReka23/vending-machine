@@ -10,22 +10,23 @@ const Admin = (props) => {
     const forceUpdate = React.useCallback(() => updateState({}), []);
     const [addedCoins, setAddedCoins] = React.useState({});
     const [addedProducts, setAddedProducts] = React.useState({});
-    const changeCountMoney = (e, id, count) => {
+    const changeCountMoney = React.useCallback((e, id, count) => {
         setAddedCoins((prev) => (
             {
                 ...prev,
                 [id]: count
             }
         ))
-    }
-    const changeCountProducts = (e, id, count) => {
+    }, []);
+    const changeCountProducts = React.useCallback((e, id, count) => {
         setAddedProducts((prev) => (
             {
                 ...prev,
                 [id]: count
             }
         ))
-    }
+    }, []);
+
     const addProduct = () => {
         props.addProducts(addedProducts, forceUpdate)
     }
@@ -45,7 +46,6 @@ const Admin = (props) => {
                 {props.coins.map((coin) => (<AdminCoin reset={props.resetCoin} changeCountMoney={changeCountMoney} key={coin.id} coin={coin} />))}
                 <Button onClick={addCoin}>Add Coins</Button>
             </div>
-
         </div>
     )
 }

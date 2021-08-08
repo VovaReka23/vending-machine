@@ -19,7 +19,6 @@ const Home = (props) => {
             props.addToCart(product, forceUpdate);
             props.sendMessage('Thank you for your order!')
         }
-
     }
 
     return (

@@ -19,7 +19,7 @@ const initialState = {
     { id: "b03", name: "Chips", price: 1.30, count: 4, img: chips }
   ],
   basket: [],
-  reset: ''
+  reset: 0
 };
 
 const product = (state = initialState, action) => {
